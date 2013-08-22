@@ -1,0 +1,7 @@
+name: Front End Course
+markdown: redcarpet
+pygments: true
+
+keep_files:  ['.git']
+
+permalink: /:categories/:title/

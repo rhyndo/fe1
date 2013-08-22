@@ -1,0 +1,579 @@
+---
+layout: lecture
+title:  "01 HTML Basics"
+date:   2013-08-22 18:48:45
+categories: lecture
+---
+
+<section>
+
+	<h2>HTML Basics</h2>
+
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML &mdash; HyperText Markup Language
+
+			HTML is the main markup language for creating web pages and other information that can be displayed in a web browser.
+
+			* HTML is a markup language
+			* HTML is a language for describing web pages.
+			* HTML documents contain HTML tags and plain text
+			* A markup language is a set of markup tags
+			* The tags describe document content
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Web browser
+
+			The purpose of a web browser is to read HTML documents and compose them into visible or audible web pages. The browser does not display the HTML tags, but uses the tags to interpret the content of the page.
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML Tags
+
+			Tags are keywords surrounded by angle brackets
+
+			```	
+			'<' + 'html' + '>' - <html>
+			'<' + 'head' + '>' - <head>
+			'<' + 'body' + '>' - <body>
+			'<' + 'p'    + '>' - <p>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### HTML Tag pairs
+
+			HTML tags normally come in pairs
+			```
+			'<' + 'p' + '>' and '</' + 'p' + '>'
+			```
+			The first tag in a pair is the start tag, the second tag is the end tag
+
+			The end tag is written like the start tag, with a forward slash before the tag name
+
+			Start and end tags are also called opening tags and closing tags
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### HTML Tag pair examples
+
+			```	
+			Opening tag            Closing tag
+
+			'<' + 'html' + '>' - '</' + 'html' + '>'
+			'<' + 'head' + '>' - '</' + 'head' + '>'
+			'<' + 'body' + '>' - '</' + 'body' + '>'
+			'<' + 'p'    + '>' - '</' + 'p'    + '>'
+
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section class="codebigger" data-markdown>
+		<script type="text/template">
+			### Main HTML tags
+
+			__`<html></html>`__  
+			describes the start and end of the web page/document  
+
+			__`<head></head>`__  
+			is the start and end of the metadata section of the document  
+
+			__`<body></body>`__  
+			is the start and end of the visible page content  
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML Page/Document structure 
+
+			Code
+
+			```
+			<html>
+				<head>
+					<title>Simple HTML document example</title>
+				</head>
+				<body>
+					<h1>Simple HTML document example</h1>
+				</body>
+			</html>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### Simple HTML document example
+
+			Image
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>	
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			### HTML Versions
+
+			Time passes, people think of new ways to entertain themselves. So new versions of HTML have been created.
+
+			How do we differentiate between the different versions?
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The <!DOCTYPE> Declaration
+
+			There are many different documents on the web, and a browser can only display an HTML page 100% correctly if it knows the HTML type and version used.
+		</script>
+		<aside class="notes" data-markdown>
+
+			DOCTYPE Reference.
+			http://www.w3schools.com/tags/tag_doctype.asp
+
+		</aside>
+	</section>
+	<section class="codesmaller" data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 1
+
+			HTML 4.01 Strict
+			```
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+			"http://www.w3.org/TR/html4/strict.dtd">
+			```
+
+			HTML 4.01 Transitional
+			```
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+			"http://www.w3.org/TR/html4/loose.dtd">
+			```
+
+			HTML 4.01 Frameset
+			```
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+			"http://www.w3.org/TR/html4/frameset.dtd">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>			
+	<section class="codesmaller" data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 2
+
+			XHTML 1.0 Strict
+			```
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			```
+
+			XHTML 1.0 Transitional
+			```
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			```
+
+			XHTML 1.1
+			```
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+			"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>			
+	<section class="codesmaller" data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 3
+
+			HTML5
+			```
+			<!DOCTYPE html>
+			```
+			Finally!!!
+
+			Something we can all remember.
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Now, lets update our HTML document
+
+			```
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>Simple HTML document example</title>
+				</head>
+				<body>
+					<h1>Simple HTML document example</h1>
+				</body>
+			</html>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			## Quick overview of the most used tags
+
+			#### Headings
+			```
+			<h1>This is a heading</h1>
+			<h2>This is a heading</h2>
+			<h3>This is a heading</h3>
+			```
+
+			#### Paragraphs
+			```
+			<p>Something smart</p>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+			Tag reference
+			http://www.w3schools.com/tags/default.asp
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Text formatting
+			```
+			<strong></strong>
+			<em></em>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Links
+			```
+			<a href="http://initlab.org">init Lab</a>
+			```
+
+			#### Images
+			```
+			<img src="/images/icons/terminal.png">
+			```
+
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Quotes
+			```
+			<cite></cite>
+			```
+
+			#### Multiple paragraph quotes
+			```
+			<blockquote>
+			<p>Smart quote</p>
+			</blockquite>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Lists
+
+			Ordered list
+			```
+			<ol>
+				<li>List item</li>
+				<li>List item</li>
+			</ol>
+			```
+
+			Unordered list
+			```
+			<ul>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Definition list
+			```
+			<dl>
+				<dt>Definition title</dt>
+				<dd>Definition description</dd>
+				<dt>Definition title</dt>
+				<dd>Definition description</dd>
+			</dl>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Tables
+			```
+			<table>
+				<thead>
+					<tr>
+						<th>Table header 1</th>
+						<th>Table header 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Table cell 1</td>
+						<td>Table cell 1</td>
+					</tr>
+				</tbody>
+			</table>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section class="codesmall" data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Forms
+			```
+			<form action="#" method="get">
+				<fieldset>
+					<legend>Login information</legend>
+					<label for="username">Username</label>
+					<p><input type="text" name="username" value="" id="username" /></p>
+					<label for="password">Password</label>
+					<p><input type="text" name="password" value="" id="password" /></p>
+				</fieldset>     
+				<fieldset>
+					<legend>Personal information</legend>
+					<label for="name">Full Name</label>
+					<p><input type="text" name="name" value="" id="name" /></p>
+					<label for="adress">Address</label>
+					<p><textarea name="adress" id="adress" rows="4" cols="40"></textarea></p> 
+					<input type="checkbox" name="mail" value="" id="mail" />
+					<label for="mail">I want to recieve mail</label>
+				</fieldset>
+				<p><input type="submit" value="Continue &rarr;"></p> 
+			</form>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Tag attributes
+
+			Attributes provide additional information about HTML elements.
+
+			* Tags elements can have attributes
+			* Attributes provide additional information about an element
+			* Attributes are always specified in the start tag
+			* Attributes come in name/value pairs like: name="value"
+		</script>
+		<aside class="notes" data-markdown>
+
+			Global Attributes Reference
+			http://www.w3schools.com/tags/ref_standardattributes.asp
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Few tips
+
+			#### Always Quote Attribute Values
+
+			Attribute values should always be enclosed in quotes.
+
+			Double style quotes are the most common, but single style quotes are also allowed.
+
+			#### Be careful when combining single and double quotes
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section class="codesmaller">
+	<section data-markdown>
+		<script type="text/template">
+			## Metadata section
+
+			#### `<head>` tag
+			The `<head>` element is a container for all the head elements. Elements inside `<head>` can include scripts, instruct the browser where to find style sheets, provide meta information, and more.
+
+			The following tags can be added to the head section:  
+			`<title>`, `<style>`, `<meta>`, `<link>`, `<script>`, `<noscript>`
+		</script>
+		<aside class="notes" data-markdown>
+
+			http://www.w3schools.com/html/html_head.asp
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Metadata - inside the `<head>` tag
+
+			#### `<title>`
+			The `<title>` tag defines the title of the document.
+			```
+			<head>
+				<title>HTML Document title</title>
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<meta>`
+
+			Metadata is data (information) about data.
+
+			The `<meta>` tag provides metadata about the HTML document.
+
+			__Examples__
+			```
+			<!-- Define keywords for search engines: -->
+			<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+
+			<!--Define a description of your web page:-->
+			<meta name="description" content="Free Web tutorials on HTML and CSS">
+
+			<!--Define the author of a page:-->
+			<meta name="author" content="Hege Refsnes">
+
+			<!--Refresh document every 30 seconds:-->
+			<meta http-equiv="refresh" content="30">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<link>`
+			The `<link>` tag defines the relationship between a document and an external resource.
+
+			```
+			<head>
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
+			</head>
+			```
+			The `<link>` tag is most used to link to style sheets
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<style>`
+
+			The `<style>` tag is used to define style information for an HTML document.
+
+			Inside the `<style>` element you specify how HTML elements should render in a browser:
+
+			```
+			<head>
+				<style type="text/css">
+					p { color: #369; }
+				</style>
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
