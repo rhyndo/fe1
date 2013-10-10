@@ -8,7 +8,7 @@
  */
 .reveal .slides { text-align: left; }
 .reveal .slides section h1, .reveal .slides section h2, .reveal .slides section h3, .reveal .slides section h4, .reveal .slides section h5, .reveal .slides section h6 { font-weight: bold;  }
-.reveal .slides section h1:first-child:last-child, .reveal .slides section h2:first-child:last-child, .reveal .slides section h3:first-child:last-child, .reveal .slides section h4:first-child:last-child, .reveal .slides section h5:first-child:last-child, .reveal .slides section h6:first-child:last-child { text-align: center; }
+.reveal .slides section h1:first-child:last-child, .reveal .slides section h2:first-child:last-child, .reveal .slides section h3:first-child:last-child, .reveal .slides section h4:first-child:last-child, .reveal .slides section h5:first-child:last-child, .reveal .slides section h6:first-child:last-child { text-align: center; margin-top: 180px; }
 .reveal .slides section h1 span, .reveal .slides section h2 span, .reveal .slides section h3 span, .reveal .slides section h4 span, .reveal .slides section h5 span, .reveal .slides section h6 span { display: block; font-size: 0.9em; }
 .reveal .slides section li h5 { margin: 0; } 
 .reveal img, .reveal video, .reveal iframe { max-width: 100%; max-height: 70%; }
@@ -24,7 +24,7 @@
 .reveal h6 { font-size: 1.0em; }
 
 .reveal pre code { padding: 10px; }
-.reveal pre, .reveal code { border-radius: 10px; width: auto; font-size: 0.9em; line-height: 1.4em; margin-bottom: 1em; }
+.reveal pre, .reveal code { border-radius: 10px; width: auto; font-size: 0.85em; line-height: 1.3em; margin-bottom: 1em; }
 .reveal ol, .reveal ul { padding-bottom: 1em; padding-top: 0.4em; }
 .reveal ul li br + a:last-child { padding-bottom: 1em; }
 .reveal blockquote { width: auto; border: none; border-left: 0.5em solid #EEE; padding-left: 0.5em; }
@@ -32,6 +32,7 @@
 .reveal .codesmaller code { font-size: 0.8em; line-height: 1.4em; }
 .reveal .codesmall code { font-size: 0.7em; line-height: 1.4em; }
 .reveal section .contact { font-size: 0.7em; border-top: 1px solid #CCC; margin-top: 2em; padding-top: 2em;   }
+.reveal section img { border: none !important; box-shadow: none !important; }
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

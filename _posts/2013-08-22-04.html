@@ -6,19 +6,309 @@ categories: lecture
 ---
 
 <section>
-
-	<h2>CSS Basics - Practice</h2>
-
+	<h1>CSS Basics - Practice</h1>
 </section>
 
 <section>
+	<section>
+		<h2>What we learned so far?</h2>
+	</section>
+	<section>
+		<h3>What is CSS?</h3>
+		<p>CSS stands for _Cascading Style Sheets_</p>
+		<p>Styles define the visual presentation of HTML elements</p>
+	</section>
 	<section data-markdown>
 		<script type="text/template">
-			## HTML &mdash; HyperText Markup Language
+			### CSS Syntax
 
+			```
+			p {
+				color: red;
+				text-align: center;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Selectors
+
+			```
+			p { color: #FFF; }
+			```
+
+			```
+			.intro { color: #345678; }
+			```
+
+			```
+			#header { color: #000; } 
+			```
+
+			```
+			a:hover { color: #F00; } 
+			```
+			
 		</script>
 		<aside class="notes" data-markdown>
 
 		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Adding CSS to our HTML documents
+
+			```
+			<head>
+				...
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
+				...
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h2>Inheritance &amp; Specificity</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Inheritance & Specificity
+
+			CSS relies heavily on specificity and style overwriting.
+			
+			Its in the name!
+
+			_Cascading_ Style Sheets
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Cascade order
+
+			In increasing order of priority.
+
+			1. External <link>
+			2. In the <head>
+			3. Inline style attribute
+			4. Using !important
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Selector priority (specificity)
+
+			<table cellspacing="30">
+			    <tr>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			    </tr>
+			    <tr>
+					<td>inline<br> styles</td>
+					<td># of `id`<br> selectors</td>
+					<td># of `class`<br> selectors</td>
+					<td># of element<br> selectors</td>
+			    </tr>
+			</table>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Selector priority (specificity)
+			
+			```
+			p { color: #FFF; }                      0, 0, 0, 1
+			```
+			```
+			.intro { color: #345678; }              0, 0, 1, 0
+			```
+			```
+			#header { color: #000; }                0, 1, 0, 0 
+			```
+			```
+			<p style="color: #000;">Text</p>        1, 0, 0, 0 
+			```
+			```
+			p { color: #000 !important; }           God-mode
+			```
+			
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h3>CSS Syling</h3>
+		<ul>
+			<li class="fragment">Background</li>
+			<li class="fragment">Text</li>
+			<li class="fragment">Font</li>
+			<li class="fragment">Border</li>
+			<li class="fragment">Margin</li>
+			<li class="fragment">Padding</li>
+			<li class="fragment">List styles</li>
+			<li class="fragment">Link styles</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Quiz time</h2>
+	</section>
+	<section>
+		<h5>Small Tip:<br><br><span class="fragment" style="display: block; padding-top: 20px; font-size: 300%;">DON'T PANIC</span></h5>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Question 1
+			### Exlain the following statements:
+
+			```
+			a { color: #369; text-decoration: none; }
+			a:hover { color: #69C; text-decoration: underline; }
+
+			a.more { color: #C00; }
+			a.more:hover { color: #900; }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Question 2
+			### Exlain the following statements:
+
+			```
+			p { padding-bottom: 15px; }
+			blockquote p:last-child { padding-bottom: 0; }
+
+			p.last { padding-bottom: 0; }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Question 3 
+			### Exlain the following statements:
+
+			```
+			#header { border-top: 1px solid #000; }
+			#header ul { padding: 0; }
+			#header nav a { color: #FFF; }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Question 4, ( _the_ WTF question )
+			### Explain these selectors:
+
+			```
+			nav a { color: #000; }
+			nav ul { padding: 0; margin: 0; }
+			nav > ul { border: 1px solid #CCC; background: #CCC; }
+			nav > ul ul { display: none; }
+			nav > ul > li:hover > ul { display: block; }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Demo time</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 1 
+			### Take task1.html from lecture 2<br> and add styles to it.
+			
+			1. Reset whitespace styles from the browser defaults
+			1. Change the body background
+			1. Change the default font of the page
+			1. Add better whitespace to the elements
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 2
+			### Add more elements to your documents
+			
+			1. Copy the document
+			1. Add one ul and one ol
+			1. Style the lists properly
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Practice time</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 3
+			### Add more elements to your documents
+			
+			1. Copy the document
+			1. Add a blockquote with 3 paragraphs
+			1. Style the blockquote so that it looks different from the main copy
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 4
+			### Add more elements to your documents
+			
+			1. Copy the document from Task 2
+			1. Add more sub-lists
+			1. Style the lists to look nice
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Homework</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 5
+			### Copy the document from lecture 3, Task 3 and style the table
+			
+			1. Change the background of the header and the footer of the table
+			1. Add padding for all cells
+			1. Make the text in the footer italic
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 6
+			### Go crazy on your wikipedia page
+			
+			1. Update the page font
+			1. Improve the whitespace between paragraphs and other tags
+			1. Go crazy! ( _not literally, of course_ )
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### Task 7, ( We are doing this on Saturday! )
+			### Create accounts in GitHub and upload your code there.
+			
+			1. Go to GitHub.com and register
+		</script>
+		<aside class="notes" data-markdown></aside>
 	</section>
 </section>

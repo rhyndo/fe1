@@ -4,10 +4,318 @@ title:  "02 HTML Basics - Practice"
 date:   2013-08-22 16:48:45
 categories: lecture
 ---
-
 <section>
 
 	<h2>HTML Basics - Practice</h2>
 
+</section>
+<section>
+	<section>
+		<h2>What we learned so far?</h2>
+	</section>
+	<section>
+		<h2>HTML Tags</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML Tags
+
+			HTML tags normally come in pairs
+			```
+			'<' + 'p' + '>' and '</' + 'p' + '>'
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h2>HTML Tag Attributes</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML Tag Attributes
+
+			Attributes provide additional information about HTML elements.
+
+			#### Links
+			```
+			<a href="http://initlab.org">init Lab</a>
+			```
+
+			#### Images
+			```
+			<img src="/images/icons/terminal.png">
+			```
+
+			* Tags elements can have attributes
+			* Attributes provide additional information about an element
+			* Attributes are always specified in the start tag
+			* Attributes come in name/value pairs like: name="value"
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h2>Indentation &amp; Code formatting</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Indentation &amp; Code formatting
+
+			1. Indent your code properly, using tabs that are 4 spaces long
+
+			2. Do not use word-wrap when coding HTML
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h2>Question:<br /><br />How do we indent HTML?</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Indentation &amp; Code formatting 
+
+			```
+			<form action="#" method="get">
+				<fieldset>
+					<legend>Login information</legend>
+					
+					<label for="username">Username</label>
+					<p><input type="text" name="usr" id="usr" /></p>
+					
+					<label for="password">Password</label>
+					<p><input type="text" name="pass" id="pass" /></p>
+
+				</fieldset>     
+			```
+		</script>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Some infrastructure</h2>
+	</section>
+	<section>
+		<h2>Text editor</h2>
+		<br>
+		<h3>Download Sublime Text 2</h3>
+		<a href="http://www.sublimetext.com/2">http://www.sublimetext.com/2</a>
+		<br> <br>
+		<h3>Video lessons for Sublime Text</h3>
+		<a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/">https://tutsplus.com/course/improve-workflow-in-sublime-text-2/</a>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Folder structure 
+			
+			1. Create a new folder called 'FrontEnd Course'
+			1. Inside 'FrontEnd Course' create folder 'code'
+			1. Inside 'code' create a new directory for each lesson<br> using numbers - eg. '02'
+			1. Inside the '[number]' folders create files/folders for each<br>task from that lesson.
+
+			<div class="fragment">
+				<h3>Questions?</h3><p></p>
+			</div>
+		</script>
+	</section>
+</section>
+<section>
+	<h2>Lets practice!</h2>
+</section>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Task 1
+			<br />
+			### Build a simple page containing:
+			<br />
+			### `h1+p+h2+p+p+p+h2+p+p+p`
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 1, Step 1
+
+			1. Go to `http://lipsum.com` and generate 7 paragraphs of text
+			2. Copy and paste in to your text editor
+			3. Add the HTML tags needed
+
+		</script>
+	</section>	<section data-markdown>
+		<script type="text/template">
+			### Task 1, Step 2
+			<br />
+			### Inside the paragraphs, add: 
+			<br />
+			### `strong`, `em`, `a`, `img`
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 1, Step 3
+			<br />
+			### Add some lists in there:
+			<br />
+			### `ul`, `ol`, `dl`
+		</script>
+	</section>
+	<section>
+		<h2>Results? Questions?</h2>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Task 2
+			<br>
+			### Build a simple page containing: 
+			<br>
+			### `ul>li+li+li+li+li`
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 2, Step 1
+
+			1. Go to `http://lipsum.com` and generate 5 paragraphs of text
+			2. Copy and paste in to your text editor
+			3. Add the HTML tags needed
+			
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 2, Step 2 <br /><br /> Update the page to match:
+			<br />
+			```
+			ul > li + li > ol > li + li < < li + li + li
+			```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 2, Step 3 <br /><br /> Update the page to match:<br />
+			```
+			ul > li + li > ol > li + li > ul > li + li < < li + li + li
+			```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 2, Step 4
+			<br />
+			### Add 2 more list items to `ol` after its sublist.
+		</script>
+	</section>
+	<section>
+		<h2>Results? Questions?</h2>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Task 3 
+			<br>
+			### Create a table with header, body and footer sections. 
+			<br>
+			### The table should have 9 rows and 8 columns.
+		</script>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### Task 3, Step 1
+
+			Use the following attributes:
+
+			```
+			<table cellspacing="1" border="1" cellpadding="5">
+			```
+
+			2. `thead` should have 1 row of cells.
+			3. `tbody` should have 8 rows of cells.
+			4. `tfoot` should have 1 row and 1 cell.
+
+		</script>
+	</section>
+	<section>
+		<h2>Question:<br><br>Where should we use<br> `td` and where `th`</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 3, Step 2 <br /><br /> Now change the first cell in each row<br> in tbody to:
+			<br>
+			```
+			<th>
+			```
+			First cell in each row should contain that row number. From 1 to 8
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 3, Step 3 
+			<br />
+			### Add all weekdays in the `thead` row
+		</script>
+	</section>
+	<section>
+		<h2>Results? Questions?</h2>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Task 4, Homework 
+			<br>
+			### Combine all 3 documents from tasks 1 to 3 into one big document.
+			<br>
+			### Add more elements to increase the size and complexity of the document.
+		</script>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### Task 4, Step 1
+			
+			Combine all 3 documents from tasks 1 to 3 into one big document.
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 4, Step 2
+
+			1. Add more paragraphs
+			1. Add all title options from h1 to h6
+			1. Add a blockquote with multiple paragraphs
+			1. Add more lists and extend their nesting complexity
+
+		</script>
+	</section>
+	<section>
+		<h2>Questions?</h2>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			## Task 5, Homework 
+			<br>
+			### Select a fairly long page from Wikipedia and copy the text from it.
+			<br>
+		</script>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### Task 5, Step 1
+			<br>
+			### Strip all HTML copied from Wikipedia
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Task 4, Step 2
+			<br>
+			### Re-format the page
+		</script>
+	</section>
+	<section>
+		<h2>Questions?</h2>
+	</section>
 </section>
 

@@ -6,19 +6,578 @@ categories: lecture
 ---
 
 <section>
-
-	<h2>Title</h2>
-
+	<h1>CSS Basics</h1>
 </section>
-
 <section>
+	<section>
+		<h2>Homework<br><br>Review & Comments</h2>
+	</section>
+	<section>
+		<h3>Homework<br>Review & Comments</h3>
+		<p class="fragment">Niki's homework review</p>
+		<p class="fragment">Milen's homework review</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>What we learned so far?</h2>
+	</section>
+	<section>
+		<h3>Lecture 01</h3>
+		<ol>
+			<li>HTML Tags</li>
+			<li>HTML Tag Attributes</li>
+			<li>Indentation &amp; Code formatting</li>
+		</ol>
+	</section>
+	<section>
+		<h3>Lecture 02 & Homework</h3>
+		<ol>
+			<li>Practice writing simple HTML documents</li>
+			<li>Practice keeping our documents indented properly</li>
+			<li>Practice <strong>NOT</strong> using word-wrap</li>
+			<li>Practice making sure <strong>ALL</strong> our tags closed</li>
+		</ol>
+	</section>
+	<section>
+		<h3>Questions?</h3>
+	</section>
+</section>
+<section>
+	<h1>CSS Basics</h1>
+</section>
+<section>
+	<section>
+		<h2>What is CSS?</h2>
+	</section>
 	<section data-markdown>
 		<script type="text/template">
-			## HTML &mdash; HyperText Markup Language
+			### What is CSS?
+
+			CSS stands for _Cascading Style Sheets_
+
+			Styles define the visual presentation of HTML elements
+		</script>
+		<aside class="notes" data-markdown>
+			* External Style Sheets can save a lot of work
+			* External Style Sheets are stored in CSS files
+			* The visual nature of CSS makes it unusable for blind people
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS solved a problem
+
+			HTML was never intended to contain tags for formatting a document.
+
+			With CSS the separation between semantic content and visual presentation can be achieved again.
+		</script>
+		<aside class="notes" data-markdown>
+			
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS _can_ save you a Lot of Work!
+			
+			External visual style guide shared across all pages of your site.
+
+			Change the style guide - change all pages visual presentation.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>CSS Syntax</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Syntax
+
+			Every CSS document is a collection of CCS rules.
+			</script>
+		<aside class="notes" data-markdown>
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Rule
+
+			CSS rule has two main parts:
+			
+			1. Selector
+			1. One or more declarations
+		</script>
+		<aside class="notes" data-markdown>
+			<img src="http://www.w3schools.com/css/selector.gif">
+
+			The selector is normally the HTML element you want to style.
+
+			Each declaration consists of a property and a value.
+
+			The property is the style attribute you want to change. Each property has a value.
+		</aside>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Rule
+
+			A CSS rule has two main parts:
+
+			```
+			selector {
+				declaration
+			}
+			```
+			
+			1. Selector
+			```
+			body {
+				...
+			}
+			```
+
+			1. One or more declarations
+			```
+			...
+				font: 16px/1.5 Verdana, sans-serif;
+				color: #333;
+			...
+			```
 
 		</script>
 		<aside class="notes" data-markdown>
-
 		</aside>
 	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Selector
+
+			The selector is a identifier of the HTML element or the group of HTML elements you want to style.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Declaration
+
+			Declarations end with a semicolon, and declaration groups are surrounded by curly brackets.
+
+			```
+			p {
+				color: red;
+				text-align: center;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
 </section>
+<section>
+	<section>
+		<h2>CSS Selectors</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Element selectors
+			
+			Using the HTML tag names as selectors will apply styles to all tags in the document.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Element selectors
+
+			Styling all titles of level 1:
+			```
+			h1 {
+				text-align: center;
+				color: #000;
+			}
+			```
+
+			Adding more white space after each paragraph:
+			```
+			p {
+				padding-bottom: 15px;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `id` selector
+
+			The `id` selector uses the `id` attribute of the HTML element, and is defined<br> with a "#".
+	
+			Using the `id` selector will give you the exact element you are refering to.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `id` selector
+
+			Adding border to the top and bottom of an HTML element with attribute id="header".
+			```
+			#header {
+				border: 1px solid #CCC;
+				border-width: 1px 0;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `class` selector
+
+			The class selector uses the HTML class attribute, and is defined<br> with a "." (dot)
+
+			The class selector allows you to set a particular style for many HTML elements with the same class.
+
+			All HTML elements with class="mod" will have bordet on top:
+			```
+			.mod {
+				border-top: 1px solid #000;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `class` selector
+
+			You can also specify that only one HTML tag should be affected by a class.
+
+			```
+			p.right {
+				text-align: right;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Attribute Selectors
+
+			Style HTML Elements With Specific Attributes
+			<br><br>
+
+			#### Syntax
+			
+			```
+			a[title] {
+				color:blue;
+			} 
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Pseudo-classes
+
+			CSS pseudo-classes are used to add special effects to some selectors.
+			<br> <br>
+
+			#### Syntax
+
+			The syntax of pseudo-classes:
+			
+			```
+			selector:pseudo-class {property:value;}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Pseudo-classes
+
+			Changing the styles of a link when the user's mouse is over it.
+			```
+			a:hover {
+				text-decoration: underline:
+				color: #C00;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Combining selectors
+			
+			<img src="/images/03/figure1.png">
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Adding CSS to our HTML documents</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Three Ways to Insert CSS
+
+			There are three ways of inserting a style sheet:
+
+			* External style sheet
+			* Internal style sheet
+			* Inline style
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## External Style Sheet
+
+			An external style sheet is ideal when the style is applied to many pages. With an external style sheet, you can change the look of an entire Web site by changing one file. Each page must link to the style sheet using the <link> tag. The <link> tag goes inside the head section:
+
+			```
+			<head>
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Internal Style Sheet
+
+			An internal style sheet should be used when a single document has a unique style. You define internal styles in the head section of an HTML page, by using the <style> tag, like this:
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Inline Styles
+
+			An inline style loses many of the advantages of style sheets by mixing content with presentation. Use this method sparingly!
+
+			To use inline styles you use the style attribute in the relevant tag. The style attribute can contain any CSS property. The example shows how to change the color and the left margin of a paragraph:
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Inheritance &amp; Specificity</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Inheritance & Specificity
+
+			CSS relies heavily on specificity and style overwriting.
+			
+			Its in the name!
+
+			_Cascading_ Style Sheets
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Cascade order
+
+			In increasing order of priority.
+
+			1. External <link>
+			2. In the <head>
+			3. Inline style attribute
+			4. Using !important
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Selector priority (specificity)
+
+			<table>
+			    <tr>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			    </tr>
+			    <tr>
+			        <td>inline styles</td>
+			        <td># of `id` selectors</td>
+			        <td># of `class` selectors</td>
+			        <td># of element selectors</td>
+			    </tr>
+			</table>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Selector priority (specificity)
+			
+			```
+			p { color: #FFF; }                      0, 0, 0, 1
+			```
+			```
+			.intro { color: #345678; }              0, 0, 1, 0
+			```
+			```
+			#header { color: #000; }                0, 1, 0, 0 
+			```
+			```
+			<p style="color: #000;">Text</p>        1, 0, 0, 0 
+			```
+			```
+			p { color: #000 !important; }           God-mode
+			```
+			
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>CSS Styling</h2>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Styling
+			
+			Lets go through some of the most popular CSS properties.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Background
+			
+			1. background-color: #fff;
+			1. background-image: url(../image.png);
+			1. background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+			1. background-position: top left;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Text
+
+			1. color: #000;
+			1. text-align: left | right | center | justify;
+			1. text-decoration: underline | overline | line-through | none;
+			1. text-transform: uppercase | lowercase | capitalize;
+			1. text-indent: 50px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Font
+			
+			1. font-family: Verdana, Arial, sans-serif
+			1. font-style: italic | normal;
+			1. font-size: 16px;
+			1. font-weight: bold | normal;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Border
+
+			1. border-style: solid | dotted | dashed | double;
+			1. border-color: #C00;
+			1. border-width: 2px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Margin
+
+			1. margin-top: 10px;
+			1. margin-right: 10px;
+			1. margin-bottom: 10px;
+			1. margin-left: 10px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Padding
+
+			1. padding-top: 10px;
+			1. padding-right: 10px;
+			1. padding-bottom: 10px;
+			1. padding-left: 10px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h3>Some tag specific style options</h3>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Lists styles
+
+			1. list-style-type: none | circle | disc;
+			1. list-style-position: inside | outside;
+			1. list-style-image: url('../image');
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Link styles
+
+			```
+			a:link     { color: #369; }  /* unvisited link */
+			a:visited  { color: #147; }  /* visited link */
+			a:hover    { color: #58B; }  /* mouse over link */
+			a:active   { color: #C00; }  /* selected link */
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Demo</h2>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Next time</h2>
+	</section>
+	<section>
+		<h2>Next time</h2>
+		<ul>
+			<li>Dimensions</li>
+			<li>Positioning</li>
+			<li>Box Model</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Homework</h2>
+	</section>
+	<section>
+		<h3>Task 1</h3>
+		<h2>Some reading ...</h2>
+		<ol>
+			<li>Read through the <a href="http://www.w3schools.com/cssref/default.asp" target="_blank">CSS Reference @ W3Schools</a></li>
+			<li>Look at the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference @ Mozilla Developer Network</a></li>
+			<li>Read the first 10 chapters of <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started?redirectlocale=en-US&redirectslug=CSS%2FGetting_Started" target="_blank">Getting started with CSS @ Mozilla Developer Network</a></li>
+		</ol>
+	</section>
+</section>
+
+
