@@ -6,19 +6,247 @@ categories: lecture
 ---
 
 <section>
-
-	<h2>Title</h2>
-
+	<h1>Typography</h1>
 </section>
-
 <section>
+	<section>
+		<h2>Homework</h2>
+	</section>
+	<section>
+		<h3>Questions?</h3>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>What we learned so far?</h2>
+		<ul>
+			<li class="fragment">CSS Syntax</li>
+			<li class="fragment">CSS Selector types</li>
+			<li class="fragment">CSS Selector specificity</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>We should talk ...</h2>
+	</section>
+	<section>
+		<h4>BIG TIP:<br><br><span class="fragment" style="display: block; padding-top: 20px; font-size: 200%;">DO AS I SAY!</span></h4>
+	</section>
+	<section>
+		<h2>Folder structure</h2>
+		<p>In this example the <strong>structure</strong> is important!</p>
+		<ul class="fragment">
+			<li>
+				fe1code
+				<ul>
+					<li>
+						02
+						<ul>
+							<li>task1.html</li>
+							<li>task2.html</li>
+						</ul>
+					</li>
+					<li>
+						04
+						<ul>
+							<li>
+								task1
+								<ul>
+									<li>index.html</li>
+									<li>common.css</li>
+								</ul>
+							</li>
+							<li>task2</li>
+							<li>task3</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h4>Folder structure</h4>
+		<ul>
+			<li>
+				fe1code
+				<ul>
+					<li>
+						[Lecture Number]
+						<ul>
+							<li>
+								task[Task Number]
+								<ul>
+									<li>index.html</li>
+									<li>common.css</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h4>Folder structure</h4>
+		<p class="fragment">All of you must use the same folder structure!</p>
+		<p class="fragment">All of you must use the same naming convention!</p>
+		<p class="fragment">All of you must <strong>follow</strong> my instructions <strong>to the letter</strong>, when going though tasks!</p>
+	</section>
+	<section>
+		<h3>Why?</h3>
+		<p class="fragment">I want to keep my sanity, when checking homework.</p>
+		<p class="fragment">I want to make your lives easier by helping you to stay organized.</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Typography</h2>
+	</section>
+	<section>
+		
+		<blockquote>
+			<p>For too long typographic style and its accompanying attention to detail have been overlooked by website designers, particularly in body copy. In years gone by this could have been put down to the technology, but now the web has caught up. The advent of much improved browsers, text rendering and high resolution screens, combine to negate technology as an excuse.</p>
+			<p style="text-align: right; display: block; padding-right: 1em;">The Elements of Typographic Style Applied to the Web<br>Introduction</p>
+		</blockquote>
+
+	</section>
+	<section>
+
+		<h2>The Book</h2>
+		<p><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></p>
+		<br />
+		<h3>What we care about</h3>
+		<p><a href="http://webtypography.net">The Elements of Typographic Style Applied to the Web</a></p>
+		<p>An unaffiliated webpage applying the same principles to web typography.</p>
+		
+	</section>
 	<section data-markdown>
 		<script type="text/template">
-			## HTML &mdash; HyperText Markup Language
+			## An explanation of ems
+
+			Ems are so-called because they are thought to approximate the size of an uppercase letter M, although 1 em is actually significantly larger than this.
+
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## An explanation of ems
+
+			Bringhurst describes the em thus:
+
+			> _The em is a sliding measure. One em is a distance equal to the type size. In 6 point type, an em is 6 points; in 12 point type an em is 12 points and in 60 point type an em is 60 points. Thus a one em space is proportionately the same in any size._
 
 		</script>
 		<aside class="notes" data-markdown>
-
+			Note that both boxes have a height and width of 1 em but because they have different font sizes, one box is bigger than the other. Box 1 has a font-size of 12 px so its width and height is also 12 px; similarly the text of box 2 is set to 60 px and so its width and height are also 60 px.
 		</aside>
 	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## An explanation of ems
+
+			To illustrate this principle in terms of CSS, consider these styles:
+
+			```
+			.small {
+				font-size:12px;
+				width:1em;
+				height:1em;
+				border:1px solid black;
+			}
+			```
+
+			```
+			.big {
+				font-size:60px;
+				width:1em;
+				height:1em;
+				border:1px solid black;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown>
+			Note that both boxes have a height and width of 1 em but because they have different font sizes, one box is bigger than the other. Box 1 has a font-size of 12 px so its width and height is also 12 px; similarly the text of box 2 is set to 60 px and so its width and height are also 60 px.
+		</aside>
+	</section>
+	<section>
+		<h2>An explanation of ems</h2>
+		<div class="small"	style="font-size: 24px;	line-height:1em; width:1em; height:1em; border:1px solid black; margin-bottom: 40px;">M</div>
+		<div class="big"	style="font-size: 120px; line-height:1em; width:1em; height:1em; border:1px solid black;">M</div>
+	</section>
+	<section>
+		<h2>Choose a comfortable measure</h2>
+		<p>The measure is the number of characters in single line of a column of text. HTML doesn’t have a concept of columns per se, instead text is held within boxes. In CSS the width of a box is set using the width property with any unit of length</p>
+	</section>
+	<section>
+		<h2>Choose a comfortable measure</h2>
+		<blockquote>
+			<p>Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple column work, a better average is 40 to 50 characters.</p>
+		</blockquote>
+	</section>
+	<section>
+		<h2>Letterspace</h2>
+		<p>Letterspace all strings of capitals and small caps, and all long strings of digits</p>
+		<br/>
+		<blockquote>
+			<p>Acronyms such as CIA and PLO are frequent in some texts. So are abbreviations such as CE and BCE or AD and BC. The normal value for letterspacing these sequences of small or full caps is 5% to 10% of the type size.</p>
+			<p>Many typographers like to letterspace all strings of numbers as well, Spacing is essential for rapid reading of long, fundamentally meaningless strings such as serial numbers, and is helpful even for shorter strings such as phone numbers and dates.</p>
+		</blockquote>
+	</section>
+	<section>
+		<h2>Letterspace</h2>
+		<p>Letter spacing in CSS is achieved with the aptly named letter-spacing property. To letter space abbreviations at 10% of the type size you could wrap the abbreviations in <abbr> tags and apply a CSS rule such as:</p>
+			<br>
+		<pre><code class="css"> p { font-size: 12pt; line-height: 15pt } </code></pre>
+	</section>
+	<section>
+		<h2>Choose a basic leading that suits the typeface, text and measure</h2>
+		<blockquote>
+			<p>Vertical space is metered in a different way to horizontal space. You must choose not only the overall measure – the depth of the column or page – but also a basic rhythmical unit. This unit is the leading, which is the distance from one baseline to the next.</p>
+		</blockquote>
+	</section>
+	<section>
+		<h2>Choose a basic leading</h2>
+		<p>Leading (pronounced “ledding”) is so called because, in mechanical presses, strips of lead are placed between lines of type to space the lines apart. Leading is achieved in css through the line-height property. For example 12 point text can be given 3 points of lead in the following manner:</p>
+		<pre><code class="css"> abbr { letter-spacing: 0.1em; } </code></pre>
+	</section>
+	<section>
+		<h2>Choose a basic leading</h2>
+		<p>However that example is bad as line-height should never be applied using absolute units such as points or pixels. In the prior example, when text is resized in a browser, the font-size increases (to 18 pt for example) but the line-height may remain at 15 pt. So instead of the lines being spaced apart, they would actually overlap.</p>
+	</section>
+	<section>
+		<h2>Add and delete vertical space in measured intervals</h2>
+		<blockquote>
+			<p>Headings, subheads, block quotations, footnotes, illustrations, captions and other intrusions into the text create syncopations and variations against the base rhythm of regularly leaded lines. These variations can and should add life to the page, but the main text should also return after each variation precisely on beat and in phase.</p>
+		</blockquote>
+	</section>
+	<section>
+		<h2>Add and delete vertical space in measured intervals</h2>
+		<p>The most common addition of vertical space on a webpage is that inserted between paragraphs. If the rhythm of the page is to be maintained, the spacing of paragraphs should be related to the basic leading. For example, the text on this page is set at 12 px with a line-height of 1.5 em, making each line 18 px in height. In order to keep the rhythm of the text, the vertical spacing between blocks should also be 18 px. This is achieved by setting top- and bottom-margins equal to the line height.</p>	
+	</section>
 </section>
+<section>
+	<h2>Demo</h2>
+</section>
+<section>
+	<section>
+		<h2>Homework</h2>
+	</section>
+	<section>
+		<h3>Task 1</h3>
+		<ol>
+			<li>Fix folder structure </li>
+			<li>Fix file naming</li>
+			<li>Register in Redmine</li>
+			<li>Fork my repo at https://github.com/rhyndo/fe1-code</li>
+			<li>Upload your code in your new repository</li>
+		</ol>
+	</section>
+</section>
+
+		<!--<blockquote cite="http://www.alistapart.com/articles/more-meaningful-typography">-->
+			<!--<p>By using culturally relevant, historically pleasing ratios to create modular scales and basing the measurements in our compositions on values from those scales, we can achieve a visual harmony not found in layouts that use arbitrary, conventional, or easily divisible numbers.</p>-->
+			<!--<p style="text-align: right; display: block; padding-right: 1em;"><a href="http://www.alistapart.com/articles/more-meaningful-typography">Tim Brown</a></p>-->
+		<!--</blockquote>-->

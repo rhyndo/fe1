@@ -6,19 +6,600 @@ categories: lecture
 ---
 
 <section>
+	<h2>Box Model & Positioning</h2>
+</section>
+<section>
+	<section>
+		<h2>Overview</h2>
+	</section>
+	<section>
+		<h3>CSS Selectors</h3>
+		<ul>
+			<li class="fragment">Element selectors</li>
+			<li class="fragment">The `class` selector</li>
+			<li class="fragment">The `id` selector</li>
+			<li class="fragment">CSS Attribute Selectors</li>
+			<li class="fragment">Pseudo-classes</li>
+			<li class="fragment">Selectors based on relationships</li>
+		</ul>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Element selectors
 
-	<h2>Title</h2>
+			Adding white space after each paragraph:
+			```
+			p {
+				padding-bottom: 15px;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `class` selector
+
+			All HTML elements with class="mod" will have bordet on top:
+			```
+			.mod {
+				border-top: 1px solid #000;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `id` selector
+
+			Adding border to the top and bottom of an HTML element with attribute id="header".
+			```
+			#header {
+				border: 1px solid #CCC;
+				border-width: 1px 0;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Attribute Selectors
+
+			All anchors that have a title attribute will have blue text color.
+			```
+			a[title] {
+				color:blue;
+			} 
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Pseudo-classes
+
+			Changing the styles of a link when the user's mouse is over it.
+			```
+			a:hover {
+				text-decoration: underline:
+				color: #C00;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h3>Selectors based on relationships</h3>
+		<table class="css-rel-selectors">
+			<tbody>
+				<tr>
+					<td><b>Selector</b></td>
+					<td><b>Selects</b></td>
+				</tr>
+				<tr>
+					<td><code>A E</code></td>
+					<td>Any E element that is a <i>descendant</i> of an A element (that is: a child, or a child of a child, <i>etc</i>.)</td>
+				</tr>
+				<tr>
+					<td><code>A &gt; E</code></td>
+					<td>Any E element that is a child of an A element</td>
+				</tr>
+				<tr>
+					<td><code>E:first-child</code></td>
+					<td>Any E element that is the first child of its parent</td>
+				</tr>
+				<tr>
+					<td><code>B + E</code></td>
+					<td>Any E element that is the next <i>sibling</i> of a B element (that is: the next child of the same parent)</td>
+				</tr>
+			</tbody>
+			<tfoot>
+			    <tr>
+					<td colspan="2">
+						<em>You can combine these to express complex relationships.</em>
+					</td>
+			    </tr>
+			</tfoot>
+		</table>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h2>Quiz</h2>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Explain the following selectors
+
+			```
+			Y { ... }
+			```
+
+			```
+			Z Y { ... }
+			```
+
+			```
+			Z Y X { ... }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Explain the following selectors
+
+			```
+			Z > Y { ... }
+			```
+
+			```
+			Z Y:first-child { ... }
+			```
+
+			```
+			Z + Y > X:last-child { ... }
+			```
+
+			```
+			Z:hover { ... }
+			```
+
+			```
+			Z + Y > X:last-child > L:hover { ... }
+			```
+
+			```
+			Z + Y:nth-child(odd)    { ... }
+			Z + Y:nth-child(even)   { ... }
+			Z + Y:nth-child(3n)     { ... }
+			Z + Y:nth-child(3n-1)   { ... }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Explain the following selectors
+
+			```css
+			#header ul { ... }
+			#header ul li { ... }
+			#header ul li a { ... }
+			```
+
+			```css
+			.mod { ... }
+			.mod header { ... }
+			.mod header h3 { ... }
+			.mod header h3 a { ... }
+
+			#sidebar .mod header h3 a { ... }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Explain the following selectors
+
+			```css
+			article section { ... }
+			article section .more { ... }
+			article section header { ... }
+			article section footer { ... }
+			```
+
+			```css
+			article.page section.meta { ... }
+			article.page section.meta p { ... }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Explain the following selectors
+
+			```css
+			#main { ... }
+			#main article { ... }
+			#main article:first-child:last-child { ... }
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
 
 </section>
 
 <section>
+	<section>
+		<h2>Box Model</h2>
+	</section>
+
+	<section>
+		<h3>Inline Elements</h3>
+		<p>An inline element has the following characteristics:</p>
+		<ul>
+			<li>Flows along with text content</li>
+			<li>Will not clear previous content to drop to the next line</li>
+			<li>Is subject to white-space settings in CSS</li>
+			<li>Will ignore top and bottom margin settings, but will apply left and right margins</li>
+			<li>Will ignore the width and height properties</li>
+			<li>Is subject to the vertical-align property</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>Block Elements</h3>
+		<p>A block element is an element that has the following characteristics:</p>
+		<ul>
+			<li>If no width is set, will expand naturally to fill its parent container</li>
+			<li>Can have margins and/or padding</li>
+			<li>If no height is set, will expand naturally to fit its child elements</li>
+			<li>By default, will be placed below previous elements in the markup</li>
+			<li>Ignores the vertical-align property</li>
+		</ul>
+	</section>
+
 	<section data-markdown>
 		<script type="text/template">
-			## HTML &mdash; HyperText Markup Language
+			### Inline vs Block Elements
 
+			```
+			<p style="border: 1px solid #333;">
+				This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!
+			</p>
+			```
+			<p class="fragment" style="border: 1px solid #333;">This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!</p>
 		</script>
-		<aside class="notes" data-markdown>
+		<aside class="notes" data-markdown></aside>
+	</section>
 
-		</aside>
+	<section data-markdown>
+		<script type="text/template">
+			### Inline vs Block Elements
+
+			```
+			<p style="border: 1px solid #333;">
+				This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!
+			</p>
+			<p style="border: 1px solid #333;">
+				Nice!
+			</p>
+			```
+			<p class="fragment" style="border: 1px solid #333;">This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!</p>
+			<p class="fragment" style="border: 1px solid #333;">
+				Nice!
+			</p>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Width & Height
+
+			We can set the dimentions of any Block element 
+
+			<div class="fragment">
+			```
+			<p style="width: 50%; border: 1px solid #333;">
+				This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!
+			</p>
+			<p style="width: 600px; height: 60px; border: 1px solid #333;">
+				Nice!
+			</p>
+			```
+			</div>
+			<p class="fragment" style="width: 50%; border: 1px solid #333;">This is quite <em style="border: 1px solid #333;">a lot</em> of info for one presentation!</p>
+			<p class="fragment" style="width: 600px; height: 60px; border: 1px solid #333;">
+				Nice!
+			</p>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Box Model
+			
+			<img src="/images/07/css-box-model.gif">
+
+			<div class="fragment" style="font-size: 0.7em;">
+				<p>actualWidth  = borderWidthLeft + borderWidthRight + paddingLeft + paddingRight + width</p>
+				<p>actualHeight = borderWidthTop + borderWidthBottom + paddingTop + paddingBottom + height</p>
+			</div>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Box Model
+			<br>
+			<div>
+				<h4>The problem</h4>
+				<p>Padding and Borders increase dimentions of block elements</p>
+			</div>
+			<br>
+			<div class="fragment">
+				<h4>The solution</h4>
+				<p>Do not set padding & borders on the same axis with set dimentions</p>
+			</div>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+
+	<section>
+		<h3>Box Model - Why is it a problem?</h3>
+	</section>
+
+</section>
+
+<section>
+	<section>
+		<h2>CSS Float property</h2>
+		<pre><code>#box { float: left | right | none; }</code></pre>
+		<pre><code>#box2 { clear: left | right | both; }</code></pre>
+	</section>
+	<section>
+		<h3>All about floats - CSS Tricks</h3>
+		<p><a href="http://css-tricks.com/all-about-floats/">http://css-tricks.com/all-about-floats/</a></p>
+	</section>
+	<section>
+		<h3>Wrapping around</h3>
+		<pre><code>img { float: right; }</code></pre>
+		<p>
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 5px; float:right;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus id orci sollicitudin elementum. Vestibulum porta venenatis est in vulputate. Nulla imperdiet rutrum erat in consectetur. Cras egestas nulla dui, non tristique augue semper et. In tincidunt dui id urna elementum vulputate. Mauris dapibus lacus quis felis suscipit, et tempor sem sollicitudin. Cras sit amet bibendum tortor, sit amet elementum magna. Curabitur et magna fermentum, vehicula eros non, gravida ligula.
+		</p>
+	</section>	
+	<section>
+		<h3>Wrapping around</h3>
+		<pre><code>img { float: left; }</code></pre>
+		<p>Nulla mattis neque tellus. <img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 15px 10px 0; float:left;" > Maecenas eros justo, pellentesque ac pharetra eu, posuere sed risus. Etiam eu tincidunt ante. Curabitur vel nisi nec erat malesuada consequat. Aliquam at neque leo. Mauris ut ligula tincidunt, euismod dolor rutrum, dignissim velit. Nullam eget ipsum a tortor sagittis interdum. Donec ullamcorper consequat convallis.</p>
+	</section>
+	<section>
+		<h3>Clearing the Float</h3>
+		<pre><code>img { float: right; }</code></pre>
+		<p>
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:right;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:right;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus id orci sollicitudin elementum. Vestibulum porta venenatis est in vulputate. Nulla imperdiet rutrum erat in consectetur. Cras egestas nulla dui, non tristique augue semper et. In tincidunt dui id urna elementum vulputate. Mauris dapibus lacus quis felis suscipit, et tempor sem sollicitudin. Cras sit amet bibendum tortor, sit amet elementum magna. Curabitur et magna fermentum, vehicula eros non, gravida ligula.
+		</p>
+	</section>
+	<section>
+		<h3>Clearing the Float</h3>
+		<pre><code>img { float: right; clear: right; }</code></pre>
+		<p>
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; clear: right; padding: 10px; margin: 5px 10px 10px 0; float:right;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; clear: right; padding: 10px; margin: 5px 10px 10px 0; float:right;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus id orci sollicitudin elementum. Vestibulum porta venenatis est in vulputate. Nulla imperdiet rutrum erat in consectetur. Cras egestas nulla dui, non tristique augue semper et. In tincidunt dui id urna elementum vulputate. Mauris dapibus lacus quis felis suscipit, et tempor sem sollicitudin. Cras sit amet bibendum tortor, sit amet elementum magna. Curabitur et magna fermentum, vehicula eros non, gravida ligula.  Curabitur et magna fermentum, vehicula eros non, gravida ligula.
+		</p>
+	</section>
+
+	<section>
+		<h3>The Great Collapse</h3>
+
+		<div style="border: 2px solid #000; padding: 20px;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:left;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:left;">
+		</div>
+		<div style="border: 2px solid #000; padding: 20px;">
+			More text!
+		</div>
+	</section>
+	<section>
+		<h3>The Great Collapse</h3>
+
+		<div style="border: 2px solid #000; padding: 20px; overflow: hidden;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:left;">
+			<img src="http://farm9.staticflickr.com/8312/8015286020_ea80c82d3c_m.jpg" style="border: 2px solid #000 !important; padding: 10px; margin: 5px 10px 10px 0; float:left;">
+		</div>
+		<div style="border: 2px solid #000; padding: 20px;">
+			More text!
+		</div>
+	</section>
+
+	<section>
+		<h2>Positioning</h2>
+	</section>
+
+	<section>
+		<h3>CSS Position property</h3>
+		<pre><code>#box { position: absolute | relative | static; left: 0; top: 0; right: 0; bottom: 0; }</code></pre>
+	</section>
+
+	<section>
+		<h3>CSS Position property</h3>
+		<p>Allows positioning of any element based on a system of coordinates.</p>
+	</section>
+	<section>
+		<h3>Position</h3>
+		<pre><code>#box { position: relative; top: 10px; left: 20px; }</code></pre>
+		
+		<div style="height: 200px; position: relative; border: 2px solid #000; overflow: hidden;">
+			
+			<div style="width: 50px; height: 50px; position: relative; top: 10px; left: 20px; border: 2px solid #000; padding: 10px; overflow: hidden;">
+
+		</div>
+	</section>
+	<section>
+		<h3>Position</h3>
+		<pre><code>#box { position: absolute; bottom: 10px; left: 20px; }</code></pre>
+		
+		<div style="height: 200px; position: relative; border: 2px solid #000; overflow: hidden;">
+			
+			<div style="width: 50px; height: 50px; position: absolute; bottom: 10px; left: 20px; border: 2px solid #000; padding: 10px; overflow: hidden;">
+
+		</div>
+	</section>
+	<section>
+		<h3>Position</h3>
+		<pre><code>#box { position: absolute; top: 50%; left: 50%; }</code></pre>
+		
+		<div style="height: 200px; position: relative; border: 2px solid #000; overflow: hidden;">
+			
+			<div style="width: 50px; height: 50px; position: absolute; top: 50%; left: 50%; border: 2px solid #000; padding: 10px; overflow: hidden;">
+
+		</div>
+	</section>
+	<section>
+		<h3>Position</h3>
+		<pre><code>#box { position: absolute; top: 50%; left: 50%; margin: -25px 0 0 -25px; }</code></pre>
+		
+		<div style="height: 200px; position: relative; border: 2px solid #000; overflow: hidden;">
+			
+			<div style="width: 50px; height: 50px; position: absolute; top: 50%; left: 50%; margin: -30px 0 0 -25px; border: 2px solid #000; padding: 10px; overflow: hidden;">
+
+		</div>
 	</section>
 </section>
+
+<section>
+	<section>
+		<h2>Demo</h2>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h2>Homework</h2>
+	</section>
+
+	<section>
+		<h3>Task 1</h3>
+		<h2>Create the following layout</h2>
+
+		<p>It should look like this:</p>
+	
+		<table class="layout">
+			<tr>
+				<td colspan="2">Header</td>
+			</tr>
+		    <tr>
+				<td style="width: 70%;">
+					Content<br>
+					70%
+				</td>
+				<td>
+					Sidebar<br>
+					30%
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Footer</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<h3>Task 2</h3>
+		<h2>Create the following layout</h2>
+
+		<p>It should look like this:</p>
+	
+		<table class="layout">
+			<tr>
+				<td colspan="2">Header</td>
+			</tr>
+		    <tr>
+				<td>
+					Sidebar<br>
+					30%
+				</td>
+				<td style="width: 70%;">
+					Content<br>
+					70%
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Footer</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<h3>Task 3</h3>
+		<h2>Create the following layout</h2>
+
+		<p>It should look like this:</p>
+	
+		<table class="layout">
+			<tr>
+				<td colspan="3">Header</td>
+			</tr>
+		    <tr>
+				<td>
+					Sidebar<br>
+					20%
+				</td>
+				<td style="width: 65%;">
+					Content<br>
+					65%
+				</td>
+				<td>
+					Sidebar<br>
+					15%
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">Footer</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<h3>Task 4</h3>
+		<h2>Make a horizontal navigation menu</h2>
+
+		<p>It should look like this:</p>
+	
+		<table class="layout">
+		    <tr>
+				<td>
+					Link 1
+				</td>
+				<td>
+					Link 2
+				</td>
+				<td>
+					Link 3
+				</td>
+				<td>
+					Link 4
+				</td>
+			</tr>
+		</table>
+	</section>
+</section>
+

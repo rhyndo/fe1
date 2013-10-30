@@ -33,6 +33,13 @@
 .reveal .codesmall code { font-size: 0.7em; line-height: 1.4em; }
 .reveal section .contact { font-size: 0.7em; border-top: 1px solid #CCC; margin-top: 2em; padding-top: 2em;   }
 .reveal section img { border: none !important; box-shadow: none !important; }
+
+.reveal .css-rel-selectors { border: 2px solid #CCC; border-collapse: collapse; table-layout: fixed; width: 100%; }
+.reveal .css-rel-selectors td,
+.reveal .css-rel-selectors th { border: 2px solid #CCC; padding: 0.3em;  }
+.reveal .css-rel-selectors tbody td:first-child,
+.reveal .css-rel-selectors tbody th:first-child { width: 30%; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -155,3 +162,7 @@ body {
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+.reveal table.layout { width: 50%; border-collapse: separate; border-spacing: 10px; border: 2px solid #999;font-size: 0.7em;  }
+.reveal table.layout td { background: #EEE; padding: 10px 15px;  }
