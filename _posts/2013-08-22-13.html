@@ -1,24 +1,291 @@
 ---
 layout: lecture
-title:  "13 Developing specific UI modules"
+title:  "13 Developing a Blog theme from scratch"
 date:   2013-08-22 05:48:45
 categories: lecture
 ---
 
 <section>
+	<h1>Developing a Blog theme <br>from scratch</h1>
+</section>
 
-	<h2>Title</h2>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Announcements
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Last 3 sessions and final Workshop
+			<br> <br>
+
+			<strong>Tuesday 26th of November (Next session)<br></strong>
+			Working on our themes
+
+			<strong>Thursday 28th of November <br></strong>
+			Working on our themes
+			
+			<strong>Saturday 30th of November <br></strong>
+			CSS Preprocessors & CSS3 - SASS & Compass
+
+			<strong>Tuesday 3rd of December <br></strong>
+			Theme Showcasing & Drinking
+
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Theme building workshops
+			<br> <br>
+
+			### Saturday 16th of November
+			10:00 to 14:00 - init Lab -	Monika will be answering your HTML, CSS related questions
+			<br> <br>
+
+			### Saturday 23rd of November
+			10:00 to 14:00 - init Lab -	Monika will be answering your HTML, CSS related questions
+		</script>
+	</section>
+
+</section>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Step 0 
+			## Content type?
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Requirements
+			<br>
+			### Article based site with static pages
+
+			* List of articles from different authors ordered by time of publication<br><br>
+			* Series of static pages for additional information
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			# Requirements
+			<br>
+			### Contact form for general inquiries
+
+			* Name
+			* Email
+			* Message
+
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			# Requirements
+			<br>
+			### Advanced form for requests. 
+			Specifics are depending on the site topic
+		</script>
+	</section>
+
+
+</section>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Step 1
+			## Templates
+		</script>
+	</section>
+
+
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - home.html
+
+			* Short description of the site's topic
+			* A few of the latest articles/posts
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - archive.html
+
+			* list of articles
+				* by date
+				* by author
+				* by category
+
+			* Sidebar
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - single.html
+
+			* Single article
+			* Comments list
+			* Comment form
+			* Sidebar
+
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - page.html
+
+			* Page content / Single article
+			* Sidebar
+
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - gallery.html
+
+			* Picture gallery
+			* Sidebar
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - contact.html
+
+			* Contact form
+			* Sidebar
+
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - submission.html
+
+			* Advanced form
+			* Sidebar
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Templates - sitemap.html
+
+			* Structure of the site with links to every page.
+			* Sidebar
+		</script>
+	</section>
+
+</section>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Step 2
+			## Content
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Content gathering
+			<br>
+			### Working with real data
+			Find a site like the one you are building and copy some content from there.
+
+			Make sure the content covers different cases. Long and short titles, different authors, long and short articles with various types of content. 
+		</script>
+	</section>
+
+</section>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Step 3
+			## Layout
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Layout
+
+			* Header
+			* Main
+				* Content
+				* Sidebar
+			* Footer
+
+		</script>
+	</section>
+</section>
+<section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Step 4
+			## Design
+		</script>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			## Minimalism is good
+
+			Don't go crazy with your design. White background, simple borders and cool layout always wins over a complicated and shiny design.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## What is the point?
+			
+			The point of the course was for you to learn to create sites and layouts with CSS and HTML.
+
+			The goal of this excersise is to showcase your knowledge both to me and yourselves.
+
+			Spend your time thinking of cool layouts and options for your site, not how to add more effects to the design.
+		</script>
+	</section>
+
 
 </section>
 
 <section>
+
 	<section data-markdown>
 		<script type="text/template">
-			## HTML &mdash; HyperText Markup Language
-
+			## DON'T PANIC
 		</script>
-		<aside class="notes" data-markdown>
-
-		</aside>
 	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### This is a process
+			
+			### Start from the beginning and keep iterating
+			<br>
+
+			#### If you are stuck - ask Google
+			<br>
+
+			#### If you are really stuck - ask Monika or Me
+		</script>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			# Good luck!
+		</script>
+	</section>
+	
 </section>

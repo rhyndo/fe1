@@ -14,11 +14,11 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="/reveal/css/reveal.min.css">
-	<link rel="stylesheet" href="/css/lazy.css" id="theme">
-	<link rel="stylesheet" href="/css/solarized_light.css"><!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../../reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../../css/wc2013.css" id="theme">
+	<link rel="stylesheet" href="../../css/solarized_light.css"><!-- For syntax highlighting -->
 
-	<script>document.write( '<link rel="stylesheet" href="/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>document.write( '<link rel="stylesheet" href="../reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!-- If the query includes 'print-pdf', use the PDF print sheet -->
 	<!--[if lt IE 9]><script src="../reveal/lib/js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -29,8 +29,8 @@
 
 		</div>
 	</div>
-	<script src="/reveal/lib/js/head.min.js"></script>
-	<script src="/reveal/js/reveal.min.js"></script>
+	<script src="../../reveal/lib/js/head.min.js"></script>
+	<script src="../../reveal/js/reveal.min.js"></script>
 	<script>
 	// https://github.com/hakimel/reveal.js#configuration
 	Reveal.initialize({
@@ -47,12 +47,12 @@
 		transitionSpeed: 'default', // default/fast/slow
 		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 		dependencies: [
-			{ src: '/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: '/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-			{ src: '/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			{ src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 		]
 	});
 	</script>
